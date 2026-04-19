@@ -1,0 +1,259 @@
+/* =========================================================================
+   Yucatech Festival — Design Tokens
+   Colors & Typography
+   Source: https://yuca.tech/visual-guidelines
+   ========================================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
+
+/* Qubed — official brand display face (shipped by user) */
+@font-face {
+  font-family: 'Qubed';
+  src: url('fonts/Qubed.woff') format('woff'),
+       url('fonts/Qubed.ttf') format('truetype'),
+       url('fonts/Qubed.otf') format('opentype');
+  font-weight: 400 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* ---------- BRAND COLORS ---------- */
+  /* Each color carries a semantic meaning per the brand guide */
+  --yt-orange:   #EC6628;  /* Energía  — primary brand color */
+  --yt-red:      #9C1021;  /* Pasión   */
+  --yt-purple:   #701352;  /* Herencia */
+  --yt-yellow:   #FFBF00;  /* Luminosidad */
+  --yt-green:    #37636B;  /* Renovación (teal) */
+  --yt-black:    #000000;  /* Elegancia — primary background */
+
+  /* ---------- NEUTRAL SCALE (derived) ---------- */
+  --yt-ink-0:    #000000;  /* pure black, backgrounds */
+  --yt-ink-1:    #0A0A0C;  /* near-black surface */
+  --yt-ink-2:    #141418;  /* card surface on dark */
+  --yt-ink-3:    #1E1E24;  /* elevated surface */
+  --yt-ink-4:    #2A2A32;  /* borders on dark */
+  --yt-ink-5:    #3D3D48;  /* muted elements */
+  --yt-ink-6:    #6B6B78;  /* secondary text on dark */
+  --yt-ink-7:    #A8A8B3;  /* tertiary text */
+  --yt-ink-8:    #D4D4DA;  /* light text on dark (hi-emphasis) */
+  --yt-ink-9:    #F5F5F7;  /* near-white */
+  --yt-ink-10:   #FFFFFF;
+
+  /* ---------- BRAND GRADIENTS ---------- */
+  --yt-grad-principal:  linear-gradient(to right, #EC6628, #FFBF00);  /* Naranja→Amarillo */
+  --yt-grad-energia:    linear-gradient(to right, #EC6628, #9C1021);  /* Naranja→Rojo */
+  --yt-grad-pasion:     linear-gradient(to right, #9C1021, #701352);  /* Rojo→Morado */
+  --yt-grad-misterio:   linear-gradient(to right, #701352, #37636B);  /* Morado→Verde */
+  --yt-grad-innovacion: linear-gradient(to right, #FFBF00, #37636B);  /* Amarillo→Verde */
+
+  /* Radial "core" gradient – evokes the isotipo center (fire core) */
+  --yt-grad-core:       radial-gradient(circle at 50% 50%, #FFBF00 0%, #EC6628 45%, #9C1021 100%);
+
+  /* ---------- SEMANTIC: Background / Foreground ---------- */
+  --yt-bg:           var(--yt-black);
+  --yt-bg-surface:   var(--yt-ink-2);
+  --yt-bg-elevated:  var(--yt-ink-3);
+  --yt-bg-inverse:   var(--yt-ink-10);
+
+  --yt-fg:           var(--yt-ink-9);   /* primary text on dark */
+  --yt-fg-muted:     var(--yt-ink-7);
+  --yt-fg-subtle:    var(--yt-ink-6);
+  --yt-fg-inverse:   var(--yt-black);
+
+  --yt-border:       var(--yt-ink-4);
+  --yt-border-strong:var(--yt-ink-5);
+
+  --yt-accent:       var(--yt-orange);
+  --yt-accent-hover: #D55820;
+  --yt-accent-press: #B84817;
+  --yt-accent-fg:    var(--yt-black);
+
+  /* ---------- SEMANTIC: States (derived from palette) ---------- */
+  --yt-state-success: var(--yt-green);
+  --yt-state-warning: var(--yt-yellow);
+  --yt-state-danger:  var(--yt-red);
+  --yt-state-info:    var(--yt-purple);
+
+  /* ---------- TYPOGRAPHY — FAMILIES ---------- */
+  /* Qubed is the official brand display face — shipped in fonts/. Orbitron is a graceful fallback. */
+  --yt-font-display: 'Qubed', 'Orbitron', ui-sans-serif, sans-serif;
+  --yt-font-body:    'Montserrat', ui-sans-serif, system-ui, sans-serif;
+  --yt-font-mono:    ui-monospace, 'JetBrains Mono', 'SF Mono', Menlo, monospace;
+
+  /* ---------- TYPE SCALE ---------- */
+  --yt-text-xs:   12px;
+  --yt-text-sm:   14px;
+  --yt-text-base: 16px;
+  --yt-text-md:   18px;
+  --yt-text-lg:   22px;
+  --yt-text-xl:   28px;
+  --yt-text-2xl:  36px;
+  --yt-text-3xl:  48px;
+  --yt-text-4xl:  64px;
+  --yt-text-5xl:  84px;
+  --yt-text-6xl:  112px;
+
+  /* ---------- LINE-HEIGHT ---------- */
+  --yt-lh-tight:  1.05;
+  --yt-lh-snug:   1.2;
+  --yt-lh-normal: 1.5;
+  --yt-lh-loose:  1.7;
+
+  /* ---------- LETTER-SPACING ---------- */
+  --yt-track-tight:  -0.02em;
+  --yt-track-normal: 0;
+  --yt-track-wide:   0.06em;
+  --yt-track-wider:  0.12em;   /* Orbitron all-caps titles */
+  --yt-track-widest: 0.2em;    /* micro-labels */
+
+  /* ---------- WEIGHTS ---------- */
+  --yt-weight-light:    300;
+  --yt-weight-regular:  400;
+  --yt-weight-medium:   500;
+  --yt-weight-semibold: 600;
+  --yt-weight-bold:     700;
+  --yt-weight-extra:    800;
+  --yt-weight-black:    900;
+
+  /* ---------- SPACING (4px base) ---------- */
+  --yt-space-0:  0;
+  --yt-space-1:  4px;
+  --yt-space-2:  8px;
+  --yt-space-3:  12px;
+  --yt-space-4:  16px;
+  --yt-space-5:  24px;
+  --yt-space-6:  32px;
+  --yt-space-7:  48px;
+  --yt-space-8:  64px;
+  --yt-space-9:  96px;
+  --yt-space-10: 128px;
+
+  /* ---------- RADII ---------- */
+  --yt-radius-none:  0;
+  --yt-radius-sm:    2px;       /* hard, technical feel */
+  --yt-radius-md:    6px;
+  --yt-radius-lg:    12px;
+  --yt-radius-xl:    20px;
+  --yt-radius-pill:  999px;
+
+  /* ---------- SHADOWS / GLOWS ---------- */
+  /* On dark backgrounds we use colored glows instead of grey drop-shadows */
+  --yt-glow-orange-sm: 0 0 12px rgba(236,102,40,0.35);
+  --yt-glow-orange-md: 0 0 28px rgba(236,102,40,0.55);
+  --yt-glow-orange-lg: 0 0 56px rgba(236,102,40,0.7);
+  --yt-glow-yellow:    0 0 24px rgba(255,191,0,0.55);
+  --yt-glow-red:       0 0 24px rgba(156,16,33,0.55);
+
+  --yt-shadow-card:    0 6px 24px rgba(0,0,0,0.5), 0 1px 2px rgba(0,0,0,0.6);
+  --yt-shadow-pop:     0 18px 60px rgba(0,0,0,0.6);
+
+  /* ---------- BORDERS ---------- */
+  --yt-border-thin:    1px solid var(--yt-border);
+  --yt-border-accent:  1px solid var(--yt-orange);
+  --yt-border-inset:   inset 0 0 0 1px rgba(255,255,255,0.06);
+
+  /* ---------- MOTION ---------- */
+  --yt-ease-standard: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --yt-ease-emphasis: cubic-bezier(0.4, 0, 0.2, 1);
+  --yt-ease-bounce:   cubic-bezier(0.34, 1.56, 0.64, 1);
+  --yt-dur-fast:      120ms;
+  --yt-dur-base:      220ms;
+  --yt-dur-slow:      400ms;
+}
+
+/* =========================================================================
+   SEMANTIC TYPE STYLES  (use these as ready-made classes OR extend with @apply)
+   ========================================================================= */
+
+/* Defaults */
+body, .yt-body {
+  font-family: var(--yt-font-body);
+  font-size: var(--yt-text-base);
+  line-height: var(--yt-lh-normal);
+  font-weight: var(--yt-weight-regular);
+  color: var(--yt-fg);
+  background: var(--yt-bg);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Display / Headings — Orbitron all-caps */
+.yt-display, h1.yt, .yt-h1 {
+  font-family: var(--yt-font-display);
+  font-size: clamp(48px, 8vw, var(--yt-text-5xl));
+  line-height: var(--yt-lh-tight);
+  font-weight: var(--yt-weight-bold);
+  letter-spacing: var(--yt-track-wider);
+  text-transform: uppercase;
+  color: var(--yt-fg);
+}
+
+h2.yt, .yt-h2 {
+  font-family: var(--yt-font-display);
+  font-size: var(--yt-text-3xl);
+  line-height: var(--yt-lh-snug);
+  font-weight: var(--yt-weight-bold);
+  letter-spacing: var(--yt-track-wider);
+  text-transform: uppercase;
+}
+
+h3.yt, .yt-h3 {
+  font-family: var(--yt-font-display);
+  font-size: var(--yt-text-xl);
+  line-height: var(--yt-lh-snug);
+  font-weight: var(--yt-weight-semibold);
+  letter-spacing: var(--yt-track-wide);
+  text-transform: uppercase;
+}
+
+/* Eyebrow / micro-label — very wide tracking */
+.yt-eyebrow {
+  font-family: var(--yt-font-display);
+  font-size: var(--yt-text-xs);
+  font-weight: var(--yt-weight-medium);
+  letter-spacing: var(--yt-track-widest);
+  text-transform: uppercase;
+  color: var(--yt-orange);
+}
+
+/* Body copy — Montserrat */
+p.yt, .yt-p, .yt-body-lg {
+  font-family: var(--yt-font-body);
+  font-size: var(--yt-text-md);
+  line-height: var(--yt-lh-normal);
+  color: var(--yt-fg);
+}
+
+.yt-body-sm {
+  font-family: var(--yt-font-body);
+  font-size: var(--yt-text-sm);
+  line-height: var(--yt-lh-normal);
+  color: var(--yt-fg-muted);
+}
+
+.yt-lead {
+  font-family: var(--yt-font-body);
+  font-size: var(--yt-text-lg);
+  line-height: var(--yt-lh-normal);
+  font-weight: var(--yt-weight-light);
+  color: var(--yt-fg);
+}
+
+/* Gradient text – for hero punches only */
+.yt-text-gradient {
+  background: var(--yt-grad-principal);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Code / meta — rarely used, but defined */
+code.yt, .yt-code {
+  font-family: var(--yt-font-mono);
+  font-size: 0.9em;
+  color: var(--yt-yellow);
+  background: var(--yt-ink-2);
+  padding: 2px 6px;
+  border-radius: var(--yt-radius-sm);
+}

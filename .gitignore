@@ -1,0 +1,6 @@
+# macOS
+.DS_Store
+
+# El manifest se genera automáticamente en el build de Cloudflare Pages
+# (node generate-manifest.js) — no se commitea manualmente
+images/manifest.json
