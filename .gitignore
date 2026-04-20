@@ -1,6 +1,10 @@
 # macOS
 .DS_Store
 
+# Wrangler (auto-generado en CI, no commitear)
+.wrangler/
+wrangler.jsonc
+
 # El manifest se genera automáticamente en el build de Cloudflare Pages
 # (node generate-manifest.js) — no se commitea manualmente
 images/manifest.json

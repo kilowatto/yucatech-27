@@ -1,0 +1,6 @@
+.git
+.claude
+node_modules
+*.log
+server.js
+generate-manifest.js
